@@ -11,6 +11,18 @@ module.exports = {
         required: true
       },
       {
+        name: 'btn_icon',
+        label: 'font awesome class',
+        type: 'string',
+        required: false
+      },
+      {
+        name: 'btn_url',
+        label: 'Destination URL',
+        require: false,
+        type: 'string'
+      },
+      {
         name: 'style',
         type: 'select',
         label: 'Button Style',
@@ -29,6 +41,16 @@ module.exports = {
     ].concat(options.addFields || [])
 
     options.arrangeFields = [
+      {
+        name:'content',
+        label:'Content Settings',
+        fields: ['btn_title','btn_url']
+      },
+      {
+        name:'style_settings',
+        label:'Appearance Settings',
+        fields: ['style','btn_icon']
+      },
     ].concat(options.addFields || [])
   },
   construct: function (self, options) {
