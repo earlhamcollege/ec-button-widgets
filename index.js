@@ -17,6 +17,26 @@ module.exports = {
         required: false
       },
       {
+        name: 'btn_size',
+        type: 'select',
+        required: false,
+        label: 'Button Size',
+        choices: [
+          {
+            label: 'Small',
+            value: '40px'
+          },
+          {
+            label: 'Medium',
+            value: '80px'
+          },
+          {
+            label: 'Large',
+            value: '100px'
+          }
+        ]
+      },
+      {
         name: 'btn_url',
         label: 'Destination URL',
         require: false,
@@ -49,7 +69,7 @@ module.exports = {
       {
         name:'style_settings',
         label:'Appearance Settings',
-        fields: ['style','btn_icon']
+        fields: ['style','btn_icon','btn_size']
       },
     ].concat(options.addFields || [])
   },

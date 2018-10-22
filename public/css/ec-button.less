@@ -1,15 +1,27 @@
+@button-color: #ffa12d;
+
 #ec-button-container{
   display: inline-block;
   padding: 10px;
   margin: 5px 10px;
-  width: 25%;
+  width: 100%;
+  height: 45px;
   text-align: center;
   font-weight: bold;
+  border: 1px solid @button-color;
+  color: white;
+  a {
+      color: none;
+      text-decoration: none;
+  }
 }
 #ec-button-container:hover {
-  filter: brightness(80%);
+  background-color: white;
+  border: 1px solid @button-color;
+  color: @button-color;
   transition-duration: 250ms;
 }
+
 
 
 //mock font awesome class for testing
@@ -22,7 +34,7 @@
 
 .ec-button-1{
   color: white;
-  background-color: red;
+  background-color: @button-color;
 }
 
 .ec-button-2{
