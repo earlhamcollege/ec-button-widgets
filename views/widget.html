@@ -1,7 +1,9 @@
-<a style="text-decoration:none;color:none;" href="{{ data.widget.btn_url }}">
-  <div style="height: {{ data.widget.btn_size }}; padding: auto;" id="ec-button-container" class="ec-button-{{ data.widget.style }}">
-    <div class="{{ data.widget.btn_icon }}">
-      {{data.widget.btn_title}}
+<a class="btn_link" style="text-decoration:none;color:none;" href="{{ data.widget.btn_url }}">
+  <div id="ec-button-container" class="ec-button-{{ data.widget.style }}">
+    <div class="ec-size-{{ data.widget.btn_size }}">
+      <div class="{{ data.widget.btn_icon }}">
+        {{data.widget.btn_title}}
+      </div>
     </div>
   </div>
 </a>

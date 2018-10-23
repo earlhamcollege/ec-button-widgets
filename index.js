@@ -24,15 +24,15 @@ module.exports = {
         choices: [
           {
             label: 'Small',
-            value: '40px'
+            value: '1'
           },
           {
             label: 'Medium',
-            value: '80px'
+            value: '2'
           },
           {
             label: 'Large',
-            value: '100px'
+            value: '3'
           }
         ]
       },
@@ -55,6 +55,18 @@ module.exports = {
           {
             label: 'Style 2',
             value: '2'
+          },
+          {
+            label: 'Style 3',
+            value: '3'
+          },
+          {
+            label: 'Style 4',
+            value: '4'
+          },
+          {
+            label: 'Style 5',
+            value: '5'
           }
         ]
       }
@@ -74,6 +86,8 @@ module.exports = {
     ].concat(options.addFields || [])
   },
   construct: function (self, options) {
-    self.pushAsset('stylesheet','ec-button');
+    self.pushAsset('stylesheet','always');
+    self.pushAsset('stylesheet','variables');
+    self.pushAsset('stylesheet','custom');
   }
 };
