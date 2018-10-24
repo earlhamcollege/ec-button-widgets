@@ -1,8 +1,15 @@
-<a class="btn_link" style="text-decoration:none;color:none;" href="{{ data.widget.btn_url }}">
+{% if data.widget.btn_url %}
+  <a class="btn_link" style="text-decoration:none;color:none;" href="{{ data.widget.btn_url }}">
+{% endif %}
   <div id="ec-button-container" class="ec-button-{{ data.widget.style }}">
-    <div class="ec-size-{{ data.widget.btn_size }}">
-      <div class="{{ data.widget.btn_icon }}">
-        {{data.widget.btn_title}}
+    <div style="width: inherit;"class="ec-size-{{ data.widget.btn_size }}">
+      {% if data.widget.btn_icon %}
+        <div class="{{ data.widget.btn_icon }}">
+      {% else %}
+        <div class="img_wrapper">
+          <img class="img_icon" style="size: contain; position: left;" src="{{ apos.attachments.url(data.widget.btn_image) }}" alt="user-defined image">
+      {% endif %}
+        <strong>{{ data.widget.btn_title }}</strong>
       </div>
     </div>
   </div>

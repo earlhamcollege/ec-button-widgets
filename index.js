@@ -38,9 +38,14 @@ module.exports = {
       },
       {
         name: 'btn_url',
-        label: 'Destination URL',
+        label: 'Destination URL or page slug',
         require: false,
         type: 'string'
+      },
+      {
+        type: 'attachment',
+        name: 'btn_image',
+        label: 'Button Image',
       },
       {
         name: 'style',
@@ -81,7 +86,7 @@ module.exports = {
       {
         name:'style_settings',
         label:'Appearance Settings',
-        fields: ['style','btn_icon','btn_size']
+        fields: ['style','btn_icon','btn_size','btn_image']
       },
     ].concat(options.addFields || [])
   },
