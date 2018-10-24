@@ -1,6 +1,6 @@
 {
   "name": "ec-button-widgets",
-  "version": "1.0.4",
+  "version": "1.0.3",
   "description": "Create buttons for to link to content, make use of FontAwesome classes, and allow multiple selectable styles.",
   "main": "index.js",
   "scripts": {
