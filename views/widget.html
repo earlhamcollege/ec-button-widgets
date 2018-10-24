@@ -7,7 +7,9 @@
         <div class="{{ data.widget.btn_icon }}">
       {% else %}
         <div class="img_wrapper">
-          <img class="img_icon" style="size: contain; position: left;" src="{{ apos.attachments.url(data.widget.btn_image) }}" alt="user-defined image">
+          {% if data.widget.btn_image %}
+            <img class="img_icon" style="size: contain; position: left;" src="{{ apos.attachments.url(data.widget.btn_image) }}" alt="user-defined image">
+          {% endif %}
       {% endif %}
         <strong>{{ data.widget.btn_title }}</strong>
       </div>
