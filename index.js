@@ -7,8 +7,7 @@ module.exports = {
       {
         name: 'btn_title',
         label: 'Button Title',
-        type: 'string',
-        required: true
+        type: 'string'
       },
       {
         name: 'btn_icon',
@@ -48,29 +47,76 @@ module.exports = {
         label: 'Button Image',
       },
       {
-        name: 'style',
+        name: 'btn_font_size',
+        type: 'range',
+        label: 'Select Text Size',
+        min: 1,
+        max: 3,
+        step: .25,
+        def: 1
+      },
+      {
+        type: 'boolean',
+        name: 'capitalize',
+        label: 'Uppercase?',
+      },
+      {
         type: 'select',
-        label: 'Button Style',
+        name: 'icon_or_image',
+        label: 'Icon or Image?',
+        choices: [
+          {
+            label: 'Icon',
+            value: 'icon'
+          },
+          {
+            label: 'Image',
+            value: 'image'
+          }
+        ]
+      },
+      {
+        name: 'img_size',
+        type: 'range',
+        label: 'Select Image Size',
+        min: 20,
+        max: 200,
+        step: 10,
+        def: 60
+      },
+      {
+        name: 'border_radius',
+        type: 'range',
+        label: 'Border Radius',
+        min: 0,
+        max: 10,
+        step: 5,
+        def: 0
+      },
+      {
+        name: 'btn_color',
+        type: 'select',
+        label: 'Button Color',
         required: false,
         choices: [
           {
-            label: 'Style 1',
+            label: 'Maroon',
             value: '1'
           },
           {
-            label: 'Style 2',
+            label: 'Red',
             value: '2'
           },
           {
-            label: 'Style 3',
+            label: 'Yellow',
             value: '3'
           },
           {
-            label: 'Style 4',
+            label: 'Blue',
             value: '4'
           },
           {
-            label: 'Style 5',
+            label: 'Grey',
             value: '5'
           }
         ]
@@ -86,7 +132,13 @@ module.exports = {
       {
         name:'style_settings',
         label:'Appearance Settings',
-        fields: ['style','btn_icon','btn_size','btn_image']
+        fields: ['btn_color', 'btn_size','btn_font_size',
+        'capitalize', 'border_radius']
+      },
+      {
+        name:'icon_settings',
+        label:'Icon/Image Settings',
+        fields: ['icon_or_image', 'btn_icon', 'btn_image', 'img_size']
       },
     ].concat(options.addFields || [])
   },

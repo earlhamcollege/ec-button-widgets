@@ -1,18 +1,26 @@
 {% if data.widget.btn_url %}
   <a class="btn_link" style="text-decoration:none;color:none;" href="{{ data.widget.btn_url }}">
 {% endif %}
-  <div id="ec-button-container" class="ec-button-{{ data.widget.style }}">
-    <div style="width: inherit;"class="ec-size-{{ data.widget.btn_size }}">
-      {% if data.widget.btn_icon %}
-        <div class="{{ data.widget.btn_icon }}">
-      {% else %}
-        <div class="img_wrapper">
-          {% if data.widget.btn_image %}
-            <img class="img_icon" style="size: contain; position: left;" src="{{ apos.attachments.url(data.widget.btn_image) }}" alt="user-defined image">
+  <div id="ec-button-container" style="border-radius:{{data.widget.border_radius}}px" class="ec-button-{{ data.widget.btn_color }}">
+    <div style="font-size:{{data.widget.btn_font_size or 1}}em;"
+    data-style-capitalize="{{data.widget.capitalize}}">
+      <div style="width: inherit;" class="ec-size-{{ data.widget.btn_size }}">
+        <div>
+          {% if data.widget.btn_icon %}
+            <div class="{{ data.widget.btn_icon }}"></div>
+            <strong>{{ data.widget.btn_title }}</strong>
+          {% else %}
+            <div class="img_wrapper">
+              {% if data.widget.btn_image %}
+                <img class="img_icon" style="width:{{data.widget.img_size or 60}}px" src="{{ apos.attachments.url(data.widget.btn_image) }}" alt="user-defined image">
+              {% endif %}
+                <strong>{{ data.widget.btn_title }}</strong>
+           </div>
           {% endif %}
-      {% endif %}
-        <strong>{{ data.widget.btn_title }}</strong>
+        </div>
       </div>
     </div>
   </div>
+{% if data.widget.btn_url %}
 </a>
+{% endif %}
