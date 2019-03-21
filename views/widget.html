@@ -1,7 +1,7 @@
 {% if data.widget.btn_url %}
   <a class="btn_link" style="text-decoration:none;color:none;" href="{{ data.widget.btn_url }}">
 {% endif %}
-  <div id="ec-button-container" style="border-radius:{{data.widget.border_radius}}px" class="ec-button-{{ data.widget.btn_color }}">
+  <div id="ec-button-container" style="border-radius:{{data.widget.border_radius}}px; margin:{{data.widget.btn_margin}}" class="ec-button-{{ data.widget.btn_color }}">
     <div style="font-size:{{data.widget.btn_font_size or 1}}em;"
     data-style-capitalize="{{data.widget.capitalize}}">
       <div style="width: inherit;" class="ec-size-{{ data.widget.btn_size }}">

@@ -120,6 +120,13 @@ module.exports = {
             value: '5'
           }
         ]
+      },
+      {
+        name: 'btn_margin',
+        type: 'string',
+        label: 'Button Margin',
+        help: 'the first pixel value is top and bottom margins, the second is left and right',
+        def: '5px 0px'
       }
     ].concat(options.addFields || [])
 
@@ -132,7 +139,7 @@ module.exports = {
       {
         name:'style_settings',
         label:'Appearance Settings',
-        fields: ['btn_color', 'btn_size','btn_font_size',
+        fields: ['btn_color', 'btn_size', 'btn_font_size', 'btn_margin',
         'capitalize', 'border_radius']
       },
       {
