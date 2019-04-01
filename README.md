@@ -31,9 +31,14 @@ In css/variables.less, colors are assigned to variable names like this:
 @button-color-1: #861f41;
 @button-color-2: #6dc6e8;
 ```
-These hex values can be edited without impacting the functionality. These values
-are used to configure the background and content colors of the quote.
+These hex values can be edited without impacting the functionality. These values are used to configure the background and content colors of the quote.
+The names of the colors can be changed in index.js in the btn_color field.
 
+#### Button Size
+In css/variables.less, button size options can be changed by changing the values given in button_size_#
+
+#### Font Size
+In index.js, the font size minimum, maximum, and step, can all be changed in the field btn_font_size
 
 ### License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
