@@ -194,5 +194,6 @@ module.exports = {
     self.pushAsset('stylesheet','always');
     self.pushAsset('stylesheet','variables');
     self.pushAsset('stylesheet','custom');
+    self.pushAsset('script','always');
   }
 };

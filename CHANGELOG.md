@@ -1,2 +1,3 @@
+- 1.0.12 - Fix Widget Loading after styles applied
 - 1.0.11 - Added Linked Pages for URL
 - 1.0.10 - Added Icon Location Before / After
