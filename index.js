@@ -13,7 +13,8 @@ module.exports = {
         name: 'btn_icon',
         label: 'font awesome class',
         type: 'string',
-        required: false
+        required: false,
+        help: 'ex. fa fa-user'
       },
       {
         name: 'btn_icon_location',
@@ -52,8 +53,26 @@ module.exports = {
         ]
       },
       {
+        name: '_page',
+        type: 'joinByOne',
+        withType: 'apostrophe-page',
+        label: 'Page',
+        required: false,
+        idField: 'pageId',
+        titleField: 'Page',
+        filters: {
+          children: true,
+          projection: {
+            title: 1,
+            slug: 1,
+            path: 1
+          }
+        }
+      },
+      {
         name: 'btn_url',
-        label: 'Destination URL or page slug',
+        label: 'External URL',
+        help: 'https://earlham.edu/about',
         require: false,
         type: 'string'
       },
@@ -83,11 +102,17 @@ module.exports = {
         choices: [
           {
             label: 'Icon',
-            value: 'icon'
+            value: 'icon',
+            showFields: [
+              'btn_icon'
+            ]
           },
           {
             label: 'Image',
-            value: 'image'
+            value: 'image',
+            showFields: [
+              'img_size', 'btn_image'
+            ]
           }
         ]
       },
@@ -150,7 +175,7 @@ module.exports = {
       {
         name:'content',
         label:'Content Settings',
-        fields: ['btn_title','btn_url']
+        fields: ['btn_title','_page','btn_url']
       },
       {
         name:'style_settings',

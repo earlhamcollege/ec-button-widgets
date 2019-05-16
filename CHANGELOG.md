@@ -1,1 +1,2 @@
+- 1.0.11 - Added Linked Pages for URL
 - 1.0.10 - Added Icon Location Before / After
