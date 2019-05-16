@@ -7,8 +7,15 @@
       <div style="width: inherit;" class="ec-size-{{ data.widget.btn_size }}">
         <div>
           {% if data.widget.btn_icon %}
-            <div class="{{ data.widget.btn_icon }}"></div>
-            <strong>{{ data.widget.btn_title }}</strong>
+            
+            {% if data.widget.btn_icon_location == 'before' %}
+              <i class="{{ data.widget.btn_icon }}"></i>
+              <strong>{{ data.widget.btn_title }}</strong>
+            {% else %}
+              <strong>{{ data.widget.btn_title }}</strong>
+              <i class="{{ data.widget.btn_icon }}"></i>
+            {% endif %}
+            
           {% else %}
             <div class="img_wrapper">
               {% if data.widget.btn_image %}

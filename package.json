@@ -1,6 +1,6 @@
 {
  "name": "ec-button-widgets",
- "version": "1.0.9",
+ "version": "1.0.10",
  "description": "Create buttons for to link to content, make use of FontAwesome classes, and allow multiple selectable styles.",
  "main": "index.js",
  "scripts": {
@@ -13,7 +13,7 @@
  "keywords": [
    "apostrophe-cms"
  ],
- "contributors": ["Sara Salloum", "Porter Libby"],
+ "contributors": ["Sara Salloum", "Porter Libby", "Brad Wood"],
  "license": "MIT",
  "bugs": {
    "url": "https://github.com/earlhamcollege/ec-button-widgets/issues"

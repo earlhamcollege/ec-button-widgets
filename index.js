@@ -16,6 +16,22 @@ module.exports = {
         required: false
       },
       {
+        name: 'btn_icon_location',
+        label: 'Icon Location',
+        type: 'select',
+        def: 'before',
+        choices: [
+          {
+            label: 'Before',
+            value: 'before'
+          },
+          {
+            label: 'After',
+            value: 'after'
+          }
+        ]
+      },
+      {
         name: 'btn_size',
         type: 'select',
         required: false,
@@ -145,7 +161,7 @@ module.exports = {
       {
         name:'icon_settings',
         label:'Icon/Image Settings',
-        fields: ['icon_or_image', 'btn_icon', 'btn_image', 'img_size']
+        fields: ['icon_or_image', 'btn_icon', 'btn_image', 'img_size', 'btn_icon_location']
       },
     ].concat(options.addFields || [])
   },

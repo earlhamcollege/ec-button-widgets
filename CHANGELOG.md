@@ -1,0 +1,1 @@
+- 1.0.10 - Added Icon Location Before / After
